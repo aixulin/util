@@ -82,6 +82,24 @@ public class CheckUtil {
     }
 
     /**
+     * 判断数组array是否为空
+     * 空 true
+     * 非空 false
+     */
+    public static boolean isEmpty(Object[] arr) {
+        return (arr == null || arr.length == 0);
+    }
+
+    /**
+     * 判断数组arr是否为非空
+     * 非空 true
+     * 空 false
+     */
+    public static boolean isNotEmpty(Object[] arr) {
+        return !isEmpty(arr);
+    }
+
+    /**
      * 检查字符串是否为空白字符串
      * 空白 true
      * 不空白 false
@@ -97,6 +115,12 @@ public class CheckUtil {
      */
     public static boolean isNotBlank(String str) {
         return !isBlank(str.trim());
+    }
+
+
+    public static void main(String[] args) {
+        String str1 = "你好";
+        System.out.println(isEmpty(str1));
     }
 
 }
