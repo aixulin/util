@@ -1,5 +1,7 @@
 package string;
 
+import java.math.BigDecimal;
+
 /**
  * @author xulin
  * @date 2020/3/23 15:59
@@ -22,6 +24,30 @@ public class StringUtil {
      */
     public static String toLowerCase(String str) {
         return str.toLowerCase();
+    }
+
+    /**
+     * String和其他数据类型之间的转换
+     */
+    public static void exchange() {
+        String str = "123";
+        // String 转化为Integer /int  Long/long
+        int i = Integer.parseInt(str);
+        Integer integer = Integer.valueOf(str);
+
+        long l = Long.parseLong(str);
+        Long aLong = Long.valueOf(str);
+
+        // String 转化为 Double /double  Float/float  BigDecimal
+        double v = Double.parseDouble(str);
+        Double aDouble = Double.valueOf(str);
+
+        float v2 = Float.parseFloat(str);
+        Float aFloat = Float.valueOf(str);
+
+        BigDecimal bigDecimal = new BigDecimal(str);
+
+        // 其他类型向String 转化 调用toString方法
     }
 
     // TODO: 2020/3/23 想到好玩的再写吧 
