@@ -15,8 +15,11 @@ public class MatchUtil {
      * 邮箱验证
      */
     public static final String REGEX_EMAIL = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
-
-    // 密码正则
+    /**
+     * 密码正则
+     * 包含 大写字母 小写字母 数字 特殊符号 在8-16位之间
+     */
+    public static final String REGEX = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[_.#?!@$%^&*-]).{8,16}$";
 
 
 }
