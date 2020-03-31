@@ -21,7 +21,6 @@ public class SqlCheckUtils {
     public enum SqlStatusConstant {
 
         NOT_SELECT("70000", "不是有效的查询语句"),
-        ILLEGAL_GRAMMAR("70001", "语法不正确"),
         HIGH_RISK("70002", "高危语句"),
         MULTI_SQL("70003", "多条语句");
 
