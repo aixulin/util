@@ -61,7 +61,7 @@ public class DateUtils {
      * @return 返回yyyy-MM-dd格式日期
      * 日期格式化 日期格式为：yyyy-MM-dd
      */
-    public static String format(Date date, String pattern) {
+    private static String format(Date date, String pattern) {
         if (date != null) {
             SimpleDateFormat df = new SimpleDateFormat(pattern);
             return df.format(date);
