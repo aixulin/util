@@ -59,7 +59,7 @@ public class StringUtil {
      * 将传入的所有字符串按顺序拼接成一个字符串返回
      */
     public static String append(String... str) {
-        StringBuilder result = new StringBuilder();
+        StringBuffer result = new StringBuffer();
         for (String temp : str) {
             result.append(temp);
         }
@@ -114,11 +114,11 @@ public class StringUtil {
         if (isEmpty(list)) {
             return "";
         }
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuffer stringBuffer = new StringBuffer();
         for (String str : list) {
-            stringBuilder.append(str).append(",");
+            stringBuffer.append(str).append(",");
         }
-        String result = stringBuilder.toString();
+        String result = stringBuffer.toString();
         return result.substring(0, result.length() - 1);
     }
 
