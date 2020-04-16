@@ -88,6 +88,14 @@ public class StringUtil {
     }
 
     /**
+     * 字符串反转
+     * abcdef -> fedcba
+     */
+    public static String  reverse(String str) {
+        return new StringBuffer(str).reverse().toString();
+    }
+
+    /**
      * 字符串转list 逗号分隔
      */
     public static List<String> getListFromString(String str) {
