@@ -15,7 +15,7 @@ public class Base64Util {
     /**
      * 字节数组base64加密成字符串
      *
-     * @param src
+     * @param src 字节数组
      * @return
      * @author billymac
      * @date 2017年12月26日 下午3:03:40
@@ -29,8 +29,7 @@ public class Base64Util {
     /**
      * 字符串base64解密成字节数组
      *
-     * @param src
-     * @return
+     * @param src 加密过的字符串
      * @author billymac
      * @date 2017年12月26日 下午3:06:22
      */
