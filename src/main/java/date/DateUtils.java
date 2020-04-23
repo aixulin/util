@@ -1,6 +1,7 @@
 package date;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -100,4 +101,15 @@ public class DateUtils {
         time -= millis;
         return format(new Date(time), pattern);
     }
+
+    /**
+    * @author xulin
+    * @date 2020/4/23 10:32
+    * @Description  获取当前时间所在年的天数
+    */
+    public static Integer getYearDays(){
+        return LocalDate.now().lengthOfYear();
+    }
+
+
 }
