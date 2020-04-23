@@ -2,6 +2,7 @@ package date;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -103,12 +104,60 @@ public class DateUtils {
     }
 
     /**
-    * @author xulin
-    * @date 2020/4/23 10:32
-    * @Description  获取当前时间所在年的天数
-    */
-    public static Integer getYearDays(){
+     * 获取当前时间所在年的天数
+     */
+    public static Integer getYearDays() {
         return LocalDate.now().lengthOfYear();
+    }
+
+    /**
+     * 根据输入的年份获取该年份的总天数
+     */
+    public static Integer getDaysByYear(Integer year) {
+        return LocalDate.of(year, 1, 1).lengthOfYear();
+    }
+
+    /**
+     * 获取当前所在年 月 日 时 分 秒
+     */
+    public static void getCurrentInfo() {
+        Calendar calendar = Calendar.getInstance();
+        // 当前所在的年
+        int year = calendar.get(Calendar.YEAR);
+        System.out.println("当前所在的年" + year);
+        // 当前所在的月
+        int month = calendar.get(Calendar.MONTH);
+        System.out.println("当前所在的月" + month);
+        // 获取当前所在日
+        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+        System.out.println("获取当前所在日" + dayOfMonth);
+        // 获取当前所在的小时(24小时制)
+        int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+        System.out.println("获取当前所在的小时(24小时制)" + hourOfDay);
+        // 获取当前所在的小时（12小时制）
+        int hour = calendar.get(Calendar.HOUR);
+        System.out.println("获取当前所在的小时（12小时制）" + hour);
+        // 获取当前所在的分钟
+        int minute = calendar.get(Calendar.MINUTE);
+        System.out.println("获取当前所在的分钟" + minute);
+        // 获取当前秒
+        int second = calendar.get(Calendar.SECOND);
+        System.out.println("获取当前秒" + second);
+        // 获取当前是星期几
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+        System.out.println("获取当前是星期几" + dayOfWeek);
+        // 获取当前年的第几周
+        int weekOfYear = calendar.get(Calendar.WEEK_OF_YEAR);
+        System.out.println("获取当前年的第几周" + weekOfYear);
+        // 获取当前月的星期数  (对这个持有怀疑态度)
+        int weekOfMonth = calendar.get(Calendar.WEEK_OF_MONTH);
+        System.out.println("获取当前月的星期数" + weekOfMonth);
+        // 获取当前月的第几个星期
+        int dayOfWeekInMonth = calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
+        System.out.println("获取当前月的第几个星期" + dayOfWeekInMonth);
+        // 获取当前年的第几天
+        int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
+        System.out.println("获取当前年的第几天" + dayOfYear);
     }
 
 
