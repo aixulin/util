@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.Arrays;
+
 /**
  * @author xulin
  * @date 2020/4/27 10:51
@@ -22,14 +24,12 @@ public class BubblingSort {
                     arr[j + 1] = temp;
                 }
             }
+            System.out.println("第" + (i + 1) + "排序的结果是" + Arrays.asList(arr));
         }
     }
 
     public static void main(String[] args) {
         Integer[] arr = {5, 4, 7, 2, 9, 8};
         sort(arr);
-        for (Integer i : arr) {
-            System.out.println(i);
-        }
     }
 }
