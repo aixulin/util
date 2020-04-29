@@ -19,7 +19,7 @@ public class InsertSort {
         for (int i = 0; i < arr.length; i++) {
             temp = arr[i];
             for (int j = i; j >= 0; j--) {
-                // 从最后位置开始追溯 如果大于 直接追加到末尾  如果小于 则往前推移
+                // 从最后位置开始追溯  如果小于 则往前推移 如果大于 直接追加到末尾 （跳出循环）
                 if (j > 0 && temp < arr[j - 1]) {
                     arr[j] = arr[j - 1];
                 } else {
