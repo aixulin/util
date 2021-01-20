@@ -15,25 +15,15 @@ public class CharacterUtils {
      */
     public static String getRandomString(int length) {
         // 定义一个字符串（A-Z，a-z，0-9）即62位；
-        //String str = "zxcvbnmlkjhgfdsaqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%";
-        String lowStr = "abcdefghijklmnopqrstuvwxyz";
-        String upStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String numStr = "0123456789";
-        String charStr = "!@#$%^&*?";
+        String str = "zxcvbnmlkjhgfdsaqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%";
         // 由Random生成随机数
         StringBuffer sb = new StringBuffer();
         // 长度为几就循环几次
         for (int i = 0; i < length; ++i) {
             // 产生0-61的数字
-            //int number = RandomUtils.nextInt(0,67);
-            int lowNum = RandomUtils.nextInt(0, 26);
-            int upNum = RandomUtils.nextInt(0, 26);
-            int numNum = RandomUtils.nextInt(0, 10);
-            int charNum = RandomUtils.nextInt(0, 6);
+            int number = RandomUtils.nextInt(0,67);
             // 将产生的数字通过length次承载到sb中
-            sb.append(lowStr.charAt(lowNum)).
-                    append(upStr.charAt(upNum)).append(numStr.charAt(numNum)).
-                    append(charStr.charAt(charNum));
+            sb.append(str.charAt(number));
         }
         // 将承载的字符转换成字符串
         return sb.toString();
@@ -54,6 +44,11 @@ public class CharacterUtils {
         }
         // 将承载的字符转换成字符串
         return sb.toString();
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(getRandomString(3));
     }
 
 
