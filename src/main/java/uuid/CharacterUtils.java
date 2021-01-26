@@ -2,6 +2,7 @@ package uuid;
 
 import org.apache.commons.lang3.RandomUtils;
 
+
 /**
  * @author xulin
  * @date 2020/4/14 11:32
@@ -21,7 +22,7 @@ public class CharacterUtils {
         // 长度为几就循环几次
         for (int i = 0; i < length; ++i) {
             // 产生0-61的数字
-            int number = RandomUtils.nextInt(0,67);
+            int number = RandomUtils.nextInt(0, 67);
             // 将产生的数字通过length次承载到sb中
             sb.append(str.charAt(number));
         }
@@ -48,7 +49,8 @@ public class CharacterUtils {
 
 
     public static void main(String[] args) {
-        System.out.println(getRandomString(3));
+        getRandomNumberString(6);
+
     }
 
 
